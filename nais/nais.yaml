@@ -25,6 +25,14 @@ spec:
     - "{{this}}"
   {{/each}}
   accessPolicy:
+    inbound:
+      rules:
+        - application: nav-dekoratoren-beta
+          namespace: personbruker
+        - application: nav-dekoratoren
+          namespace: personbruker
+        - application: decorator-next
+          namespace: personbruker
     outbound:
       rules:
         - namespace: min-side
